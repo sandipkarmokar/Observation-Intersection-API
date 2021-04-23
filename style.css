@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.container {
+    background: hsl(89, 31%, 75%);
+    width: 100%;
+    padding-top: 2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #333;
+}
+
+.container .main {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.container .main .item {
+    background: hsl(350, 65%, 51%);
+    margin: 4rem auto;
+    text-align: center;
+    height: 300px;
+    width: 200px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 45%;
+    box-shadow: 2px 2px 4px 4px hsl(350, 60%, 34%);
+    transition: 1.5s;
+}
+/* NOTE:::: If the child item get outside the viewport of the parent item hirizontally while its property is transform:translateX() the observation intersection API doesnt works */
+.container .main .hidden {
+    opacity: 0;
+    transform: translateX(-70%);
+}
